@@ -77,9 +77,6 @@ activity$datetype <- sapply(activity$date, function(x) {
                 {y <- "Weekday"}
                 y
         })
- ```
- the differences are:
- ```{r}
         
  activity_by_date <- aggregate(steps~interval + datetype, activity, mean, na.rm = TRUE)
 plot<- ggplot(activity_by_date, aes(x = interval , y = steps, color = datetype)) +
