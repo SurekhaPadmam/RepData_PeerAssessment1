@@ -1,8 +1,9 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-author: Surekha Padmam
+author: "Surekha Padmam"
+date: "may 10,2020"
 output: html_document
-    keep_md: true
+keep md=TRUE
 ---
 
 
