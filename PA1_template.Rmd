@@ -61,6 +61,12 @@ total_steps_imputed <- aggregate(steps ~ date, activity_imputed, sum)
 names(total_steps_imputed) <- c("date", "daily_steps")
 hist(total_steps_imputed$daily_steps, col = "darkblue", xlab = "Total steps per day", ylim = c(0,30), main = "Total number of steps taken each day", breaks = seq(0,25000,by=2500))
 ```
+finding mean and  median of steps taken per day
+```{r}
+mean(total_steps_imputed$daily_steps)
+median(total_steps_imputed$daily_steps)
+```
+
 
 
 
