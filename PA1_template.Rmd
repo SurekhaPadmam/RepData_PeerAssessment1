@@ -1,12 +1,30 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
+author: Surekha Padmam
+output: html_document
     keep_md: true
 ---
 
 
+
+Setting global option to set echo true   and to turn off warnings:
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(warning=FALSE)
+```
+
 ## Loading and preprocessing the data
+
+```{r}
+library(ggplot2)
+activity<-read.csv("activity.csv",sep=",")
+activity$date<-as.POSIXct(activity$date,"%Y-%m-%d")
+weekday<-weekdays(activity$date)
+activity<-cbind(activity,weekday)
+
+summary(activity)
+```
 
 
 
